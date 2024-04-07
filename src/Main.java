@@ -10,7 +10,8 @@ public class Main {
 
     // ----------------- Test 1 -----------------
     GraphConstructor constructor = new GraphConstructor();
-    constructor.constructSampleGraph();
+//    constructor.constructSampleGraph();
+    constructor.GraphApp(50, 3, 7);
     Graph graph = constructor.getGraph();
     List<Vertex> destinations = constructor.getDestinations();
     // -------------- End of Test 1 --------------

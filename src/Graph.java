@@ -48,4 +48,13 @@ public class Graph {
     }
     return str;
   }
+
+  public Boolean hasEdge(Vertex vertex1, Vertex vertex2) {
+    for (Edge edge : edges) {
+      if ((edge.getVertex1().equals(vertex1) && edge.getVertex2().equals(vertex2)) || (edge.getVertex1().equals(vertex2) && edge.getVertex2().equals(vertex1))) {
+        return true;
+      }
+    }
+    return false;
+  }
 }

@@ -45,7 +45,22 @@ public class GraphConstructor {
   }
 
   //  public void constructComplexGraph() {}
-
+  public void GraphApp(int numberOfVertices, int mode, int numberOfDestinations) {
+    Generator generator = new Generator(numberOfVertices, mode, numberOfDestinations);
+    this.graph = generator.getGraph();
+    this.destinations = generator.getDestinations();
+    displayGraph();
+  }
+  public void displayGraph() {
+    System.out.println("--------------------");
+    System.out.println("Graph has " + graph.getVertices().size() + " vertices.");
+    System.out.println("Graph has " + graph.getEdges().size() + " edges.");
+    System.out.println("Destinations:");
+    for (Vertex destination : destinations) {
+      System.out.println(destination.getId());
+    }
+    System.out.println("--------------------");
+  }
   public Graph getGraph() {
     return graph;
   }
